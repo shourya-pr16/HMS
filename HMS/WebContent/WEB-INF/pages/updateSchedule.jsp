@@ -9,10 +9,11 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div align="center">
 		<f:form action="/HMS/updateSchedule" modelAttribute="updatedSchedule" method="post">
 		<table>
-		<tr><td>Enter Schedule Id which you want to change </td><td> : </td><td><f:input path="scheduleId" required="required"/> </td></tr>
-		<tr><td>Enter Date </td><td> : </td><td><f:input path="appDate" required="required"/></td></tr>
+		<tr><td>Enter Schedule Id which you want to change </td><td> : </td><td><f:input path="scheduleId" required="required" type="number"/> </td></tr>
+		<tr><td>Enter Date </td><td> : </td><td><f:input path="appDate"/></td></tr>
 		<tr><td>Choose Slot Option </td><td> : </td><td> <f:select path="slot" required="required">
 			<f:option value="10-11"/>10-11
 			<f:option value="11-12"/>11-12
@@ -27,6 +28,6 @@
 		
 		<br><br><br>
 		<a href="/HMS/backToDoctorMenu">Go Back to Main Menu</a>
-		
+		</div>
 </body>
 </html>

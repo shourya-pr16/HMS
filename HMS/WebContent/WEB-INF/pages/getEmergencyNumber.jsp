@@ -7,8 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div align="center">
 	<form action="/HMS/getEmergencyNumber" method="post">
-	Enter Doctor Id : <input type="text" name="docId" required="required"/>
+	Enter Doctor Id : <input type="number" name="docId" required="required"/>
 	<input type="submit" value="Get Emergency Number"/> 
 	</form>
 	
@@ -18,5 +19,6 @@
 	
 	<br><br><br>
 		<a href="/HMS/backToPatientMenu">Go Back to Main Menu</a>
+		</div>
 </body>
 </html>

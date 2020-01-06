@@ -8,18 +8,22 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div align="center" font-family="Verdana">
+<h5 font-color="red"><c:out value="${errorMessage}"></c:out> </h5>
 
-<h5 color="red"><c:out value="${errorMessage}"></c:out> </h5>
-
+<br>
+<h1>Login Form</h1>
 <table>
 		<form action="/HMS/docLogin" method="post">
-			<tr><td>Enter Id : </td><td><input type="number" name="id" required="required"></td></tr>
-			<tr><td>Enter Password : </td><td><input type="password" name = "password" required="required"></td></tr>
-			<tr colspan = "2"><td><input type="submit" name="submit"></td></tr>
+			<tr><td>Enter Id : </td><td><input type="number" name="id" placeholder="Doctor Id" required="required"></td></tr>
+			<tr><td>Enter Password : </td><td><input type="password" name = "password" placeholder="Password" required="required"></td></tr>
+			<tr><td><input type="submit" value="Login"></td></tr>
 			<tr><td><a href="/HMS/addDoctor">Click Here for SignUp</a></td></tr>
 		</form>
-	</table>
+		</table>
+		<br><br>
+		<a href="/HMS/">Go Back To Home Page</a>
 	
-
+</div>
 </body>
 </html>

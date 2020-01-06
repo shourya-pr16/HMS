@@ -57,4 +57,10 @@ public class PatientServiceImpl implements PatientService {
 		return patientDao.patientSchedule(patientId);
 	}
 
+	@Override
+	public Schedule getScheduleById(int id) {
+		// TODO Auto-generated method stub
+		return patientDao.getScheduleById(id);
+	}
+
 }

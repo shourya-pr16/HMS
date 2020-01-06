@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div align="center">
 	<form action="/HMS/getDoctorList" method="post">
 		<select name="department" required="required">
 								<option value="Cardiologist"/>Cardiologist
@@ -51,5 +52,6 @@
 	</div>
 	<br><br><br>
 		<a href="/HMS/backToPatientMenu">Go Back to Main Menu</a>
+	</div>
 </body>
 </html>

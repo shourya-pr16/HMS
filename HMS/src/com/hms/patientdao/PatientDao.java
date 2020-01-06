@@ -15,4 +15,5 @@ public interface PatientDao {
 	public String getDoctorEmergencyNumber(int doctorId);
 	public List<Doctor> getDepttWiseDoctorList(String department);
 	public List<Schedule> patientSchedule(int patientId);
+	public Schedule getScheduleById(int id);
 }

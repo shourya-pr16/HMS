@@ -7,7 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Your Generated UserId is : ${id}</h1> 
+<div align="center">
+	<h1>Generated Id is : ${id}</h1> 
 	<a href="/HMS/">Go Back to Main Page</a>
+	</div>
 </body>
 </html>

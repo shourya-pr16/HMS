@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div align="center">
 	<f:form action="/HMS/bookSchedule" modelAttribute="schedule" method="post">
 	(Enter Date in DD/MM/YYYY format)<br>
 	Enter Appointment Date : <f:input path="appDate" required="required"/><br>
@@ -23,5 +24,6 @@
 	
 	<br><br><br>
 		<a href="/HMS/backToPatientMenu">Go Back to Main Menu</a>
+		</div>
 </body>
 </html>

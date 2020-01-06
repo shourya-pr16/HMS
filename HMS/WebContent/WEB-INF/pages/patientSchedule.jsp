@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div align="center">
 
 	<h2> Schedules</h2>
 	<c:choose>
@@ -28,7 +29,7 @@
 	</c:choose>
 	
 	<br><br><br>
-		<a href="/HMS/backToDoctorMenu">Go Back to Main Menu</a>
-	
+		<a href="/HMS/backToPatientMenu">Go Back to Main Menu</a>
+</div>	
 </body>
 </html>

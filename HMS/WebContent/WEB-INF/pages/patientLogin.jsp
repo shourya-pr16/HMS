@@ -3,20 +3,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<meta charset="utf-8">
+<title>Paper Stack</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
+<div align="center">
 <body>
-		${errorMessage}
+<h5 font-color="red">${errorMessage}</h5>
+<br>
+<h1>Login Form</h1>
 <table>
 		<form action="/HMS/patientMenu" method="post">
-			<tr><td>Enter Id : </td><td><input type="text" name="id" required="required"/></td></tr>
-			<tr><td>Enter Password : </td><td><input type="password" name = "password" required="required"/></td></tr>
-			<tr colspan = "2"><td><input type="submit" name="submit"></td></tr>
+			<tr><td>Enter Id : </td><td><input type="number" name="id" placeholder="Patient Id" required="required"/></td></tr>
+			<tr><td>Enter Password : </td><td><input type="password" name = "password" placeholder="Password" required="required"/></td></tr>
+			<tr colspan = "2"><td><input type="submit" value="Login"></td></tr>
 		</form>
 		<tr><td><a href="/HMS/goForSignup">Click Here for SignUp</a></td></tr>
 	</table>
-
-
+	
+		<br><br>
+		<a href="/HMS/">Go Back To Home Page</a>
+		</div>
 </body>
 </html>

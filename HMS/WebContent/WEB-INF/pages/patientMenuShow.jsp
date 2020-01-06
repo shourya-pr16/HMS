@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div align="center">
 	 <form action="/HMS/patientMenuChoice" method="post">
 		<select name="patientChoice" required="required">
 			<option value="bookAppointment"/>Book Appointment
@@ -18,5 +19,6 @@
 <br><br><br>
 	<a href="/HMS/patientLogout">LogOut</a>
 	
+	</div>
 </body>
 </html>

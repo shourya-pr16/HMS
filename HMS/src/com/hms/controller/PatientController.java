@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -59,9 +60,9 @@ public class PatientController {
 		HttpSession session = request.getSession(false);
 		return new ModelAndView("scheduleEntry","schedule",new Schedule());
 	}
-
+	
 	@RequestMapping(value="/bookSchedule")
-	public String bookSchedule(@ModelAttribute("schedule") Schedule schedule,HttpServletRequest request) 
+	public String bookSchedule(@ModelAttribute("schedule") Schedule schedule,HttpServletRequest request,ModelMap map) 
 	{
 		
 //		switch("slotChoice")
@@ -83,8 +84,9 @@ public class PatientController {
 		schedule.setPatientId((int)session.getAttribute("patientId"));
 //		schedule.setPatientId((int)map.get("patientId"));
 		int id=patientDao.bookSchedule(schedule);
-		System.out.println(id);
-		return "generatedId";
+		map.addAttribute("bookedSchedule",patientService.getScheduleById(id));
+		map.addAttribute("id",id);
+		return "newBookedSchedule";
 	}
 	
 	@RequestMapping(value="/patientMenu")

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    <%@taglib uri = "http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,29 +9,25 @@
 </head>
 <body>
 <div align="center">
-
-	<h2> Schedules</h2>
-
 	<c:choose>
-		<c:when test="${empty myMap }">
-			<h4>No Schedules Available</h4>
-		</c:when>
-		<c:otherwise>
+		<c:when test="${not empty bookedSchedule}">
+	<h1>Your Appointment Has Been Booked.</h1><br>
+	<h4>Below Are the Details of your Appointment : </h4><br><br>
 	<table>
-		<c:forEach items="${myMap}" var="schedule">
 			<tr><td>Schedule Id </td><td> : </td><td>${schedule.scheduleId}</td></tr>
 			<tr><td>Appointment Date</td><td> : </td><td> ${schedule.appDate}</td></tr>
 			<tr><td>Doctor Id </td><td> : </td><td> ${schedule.doctorId}</td></tr>
 			<tr><td>Patient Id</td><td> : </td><td> ${schedule.patientId}</td></tr>
 			<tr><td>	Slot </td><td> : </td><td> ${schedule.slot}</td></tr>
 		<tr><td>====</td><td> ==== </td><td>====</td></tr>
-		</c:forEach>
-	</table>
+		</table>
+	</c:when>
+	<c:otherwise>
+		<h1>Sorry! Your Appointment cannot be Booked.</h1>
 	</c:otherwise>
 	</c:choose>
-	
-	<br><br><br>
-		<a href="/HMS/backToDoctorMenu">Go Back to Main Menu</a>
+	<br><br>
+	<a href="/HMS/backToPatientMenu">Go Back to Main Menu</a>
 	</div>
 </body>
 </html>

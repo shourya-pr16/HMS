@@ -98,6 +98,15 @@ public class PatientDaoImpl implements PatientDao{
 		
 		return sch;
 	}
+
+	@Override
+	public Schedule getScheduleById(int id) {
+		// TODO Auto-generated method stub
+		
+		Schedule sch = hiberTemplate.get(Schedule.class,id);
+		
+		return sch;
+	}
 	
 	
 }

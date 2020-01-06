@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div align="center">
 
 	<form action="/HMS/doctorChoice" method="post">
 		
@@ -23,5 +24,6 @@
 	</form>
 	<br><br><br>
 	<a href="/HMS/doctorLogout">LogOut</a>
+	</div>
 </body>
 </html>

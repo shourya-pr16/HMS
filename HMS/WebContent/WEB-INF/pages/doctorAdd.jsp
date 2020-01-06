@@ -8,6 +8,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div align="center" font-family="fantasy">
+<h1>Sign Up Form</h1>
+
 <table>
 	<f:form action="/HMS/addNewDoctor" modelAttribute="doctor" method="post">
 	<tr><td>	Enter First Name : </td><td><f:input path="firstName" required="required"/></td></tr>
@@ -30,6 +33,6 @@
 	<tr><td><input type="submit" value="submit"/></tr>
 	</f:form>
 </table>
-
+</div>
 </body>
 </html>
